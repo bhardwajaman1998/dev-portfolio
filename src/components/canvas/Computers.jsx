@@ -1,18 +1,22 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { Suspense, useEffect, useState, useRef } from "react";
+import { Canvas, useFrame} from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
+  const boxRef = useRef();
+  useFrame(() => {
+    boxRef.current.rotation.y += 0.01;
+  });
 
   return (
-    <mesh>
+    <mesh ref={boxRef} rotation-y={Math.PI * 0.0}>
       <hemisphereLight intensity={0.15} groundColor='black' />
       <spotLight
         position={[-20, 50, 10]}
-        angle={0.12}
+        angle={0.22}
         penumbra={1}
         intensity={1}
         castShadow
@@ -21,9 +25,9 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.4 : 0.75}
-        position={isMobile ? [-7, -3, -2.2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={isMobile ? 0.4 : 0.04}
+        position={isMobile ? [-7, -3, -2.2] : [0, -5.25, -4.5]}
+        rotation={[-0.01, -0.1, -0.0]}
       />
     </mesh>
   );
@@ -31,26 +35,44 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const canvasRef = useRef();
 
   useEffect(() => {
-    // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 500px)");
 
-    // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
 
-    // Define a callback function to handle changes to the media query
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
 
-    // Add the callback function as a listener for changes to the media query
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
-    // Remove the listener when the component is unmounted
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
+  }, []);
+
+  useEffect(() => {
+    const mesh = canvasRef.current;
+
+    let start = null;
+    const duration = 10000;
+
+    const animate = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = timestamp - start;
+
+      const rotation = (progress / duration) * 360;
+
+      mesh.rotation.y = (rotation * Math.PI) / 180;
+
+      if (progress < duration) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
   }, []);
 
   return (
@@ -58,7 +80,7 @@ const ComputersCanvas = () => {
       frameloop='always'
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ position: [30, 3, 15], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
@@ -67,7 +89,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <Computers isMobile={isMobile} ref={canvasRef} />
       </Suspense>
 
       <Preload all />
