@@ -25,6 +25,29 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleDownload = () => {
+    window.open("https://drive.google.com/uc?export=download&id=1oCZ2M8Ywmxvu5qThMcWjM2ySJl1wnWbW", "_blank");
+    // var url = "https://drive.google.com/uc?export=download&id=1oCZ2M8Ywmxvu5qThMcWjM2ySJl1wnWbW"
+    // var fileName = "Aman_Bhardwaj_Resume"
+    // fetch(url)
+    //   .then((response) => response.blob())
+    //   .then((blob) => {
+    //     const url = window.URL.createObjectURL(new Blob([blob]));
+    //     const link = document.createElement("a");
+    //     link.href = url;
+    //     link.download = fileName || "downloaded-file";
+    //     document.body.appendChild(link);
+
+    //     link.click();
+
+    //     document.body.removeChild(link);
+    //     window.URL.revokeObjectURL(url);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error fetching the file:", error);
+    //   });
+  };
+
   return (
     <nav
       className={`${
@@ -59,7 +82,13 @@ const Navbar = () => {
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => {
+                if (nav.id === "about"){
+                  handleDownload()
+                }else{
+                  setActive(nav.title);
+                }
+              }}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
@@ -87,8 +116,12 @@ const Navbar = () => {
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
                   onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
+                    if (nav.id === "about"){
+                      handleDownload()
+                    }else{
+                      setToggle(!toggle);
+                      setActive(nav.title);
+                    }
                   }}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
