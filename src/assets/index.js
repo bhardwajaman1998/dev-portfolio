@@ -10,6 +10,7 @@ import close from "./close.svg";
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
+import swift from  "./tech/swift.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
@@ -30,6 +31,12 @@ import clicklabs from "./company/clicklabs.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import wellquest from  "./wellquest.png"
+import skillbridge from  "./skillbridge.png"
+import autohive from  "./autoHive.png"
+import googleVision from  "./googleVision.png"
+import movieDb from  "./movieDb.png"
+
 
 export {
   logo,
@@ -47,6 +54,7 @@ export {
   html,
   javascript,
   mongodb,
+  swift,
   nodejs,
   reactjs,
   redux,
@@ -60,5 +68,10 @@ export {
   carrent,
   jobit,
   tripguide,
-  clicklabs
+  clicklabs,
+  wellquest,
+  skillbridge,
+  autohive,
+  googleVision,
+  movieDb
 };

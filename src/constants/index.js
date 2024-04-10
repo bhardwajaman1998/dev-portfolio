@@ -1,29 +1,24 @@
 import {
   mobile,
   backend,
-  creator,
   web,
   javascript,
   typescript,
-  html,
-  css,
   reactjs,
-  redux,
-  tailwind,
   nodejs,
   mongodb,
   git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  swift,
   carrent,
   jobit,
   tripguide,
   threejs,
   clicklabs,
+  wellquest,
+  skillbridge,
+  autohive,
+  googleVision,
+  movieDb
 } from "../assets";
 
 export const navLinks = [
@@ -43,11 +38,11 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Full Stack Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "React Developer",
     icon: mobile,
   },
   {
@@ -55,7 +50,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "iOS Developer",
+    title: "iOS app Developer",
     icon: mobile,
   },
 ];
@@ -74,6 +69,10 @@ const technologies = [
     icon: reactjs,
   },
   {
+    name: "Swift",
+    icon: swift,
+  },
+  {
     name: "Node JS",
     icon: nodejs,
   },
@@ -82,7 +81,7 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
+    name: "Objective-C",
     icon: threejs,
   },
   {
@@ -99,10 +98,10 @@ const experiences = [
     iconBg: "#383E56",
     date: "2020 - 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and maintaining iOS mobile applications using React.js and other related technologies.",
+      "Spearheaded the development of over 30+ innovative iOS applications on the Mac platform, leveraging Swift/Objective-C and Cocoa frameworks to deliver advanced functionalities.",
+      "Applied strong programming skills and object-oriented analysis and design principles to develop scalable and maintainable codebases.",
+      "Mentored team members, fostering a culture of knowledge-sharing and effective collaboration",
     ],
   },
   {
@@ -112,46 +111,22 @@ const experiences = [
     iconBg: "#383E56",
     date: "2019 - 2020",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Aided in optimising coding and testing procedures, enhancing efficiency.",
+      "Developed adeptness in Swift and Objective-C through practical application",
+      "Played a key role in crafting program specifications, and ensuring adherence to industry benchmarks.", 
+      "Transitioned to real-world application development swiftly after minimal training.",
     ],
   }
 ];
 
 const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
 ];
 
 const projects = [
   {
     name: "WellQuest",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "An intricate React Native marvel meticulously crafted for seamless calorie tracking and cutting-edge image scanning, complemented by a sophisticated appointment scheduling system.",
     tags: [
       {
         name: "react",
@@ -162,7 +137,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "restapi",
+        name: "REST",
         color: "green-text-gradient",
       },
       {
@@ -170,20 +145,20 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: wellquest,
     source_code_link: "https://github.com/bhardwajaman1998/wellquest-frontend",
   },
   {
     name: "SkillBridge",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      " A sophisticated fusion of React.js frontend and Node.js backend, featuring an elegant dashboard meticulously designed to simplify startup developer onboarding, enhanced with cutting-edge OpenAI testing capabilities.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "REST",
         color: "green-text-gradient",
       },
       {
@@ -191,13 +166,13 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: skillbridge,
     source_code_link: "https://github.com/bhardwajaman1998/Cosmic-Chaos-Skillbridge",
   },
   {
     name: "WellQuest-Backend",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A robust Node.js backend intricately interwoven with MongoDB, engineered to perfection, empowering Wellquest's frontend with dynamic REST APIs, setting the stage for unparalleled user experiences.",
     tags: [
       {
         name: "NodeJS",
@@ -208,28 +183,28 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "restapi",
+        name: "REST",
         color: "green-text-gradient",
       },
       {
-        name: "AWSEC2",
+        name: "AwsEC2",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/bhardwajaman1998/wellquest-frontend",
+    image: wellquest,
+    source_code_link: "https://github.com/bhardwajaman1998/wellquest-backend",
   },
   {
     name: "Movie Database",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A pinnacle of React Native innovation, meticulously sculpted to deliver unparalleled movie and show exploration experiences, boasting advanced search, sorting, and filtering functionalities for the most discerning of users.",
     tags: [
       {
         name: "ReactNative",
         color: "blue-text-gradient",
       },
       {
-        name: "RestAPI",
+        name: "REST",
         color: "green-text-gradient",
       },
       {
@@ -237,13 +212,13 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: movieDb,
     source_code_link: "https://github.com/bhardwajaman1998/MovieDB-App",
   },
   {
     name: "AutoHive",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A groundbreaking JavaScript masterpiece ingeniously engineered with GraphQL prowess and intelligent caching mechanisms, offering unparalleled precision in managing vast volumes of user vehicle data with effortless grace.",
     tags: [
       {
         name: "Javascript",
@@ -258,13 +233,13 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: autohive,
     source_code_link: "https://github.com/bhardwajaman1998/PeopleAndCars",
   },
   {
     name: "Who am I?",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "An awe-inspiring JavaScript marvel harnessing the power of Google Vision, meticulously designed to effortlessly identify and categorize objects captured by the camera, offering users a seamless and enlightening experience with every scan.",
     tags: [
       {
         name: "Javascript",
@@ -279,7 +254,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: googleVision,
     source_code_link: "https://github.com/bhardwajaman1998/Google-Vision-API",
   },
  
