@@ -8,7 +8,9 @@ const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
   const boxRef = useRef();
   useFrame(() => {
-    boxRef.current.rotation.y += 0.01;
+    if (!isMobile){
+      boxRef.current.rotation.y += 0.01;
+    }
   });
 
   return (
@@ -25,8 +27,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.4 : 0.04}
-        position={isMobile ? [-7, -3, -2.2] : [0, -5.25, -4.5]}
+        scale={isMobile ? 0.09 : 0.1}
+        position={isMobile ? [0, -5, -4.2] : [0, -5.25, -4.5]}
         rotation={[-0.01, -0.1, -0.0]}
       />
     </mesh>
@@ -82,6 +84,7 @@ const ComputersCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [30, 3, 15], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      style={{flex: 1}}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
