@@ -64,7 +64,6 @@ const About = () => {
       <div style={ isMobile ? ({display: 'flex', flexDirection: 'column-reverse', justifyContent:'center', gap: '20px'}) : ({display: 'flex', flexDirection: 'row', alignItems: 'space-between'})} >
         <div style={{flex: 0.5}}>
           <motion.div variants={textVariant()}>
-            <p className={styles.sectionSubText}>Introduction</p>
             <h2 className={styles.sectionHeadText}>Overview.</h2>
           </motion.div>
 
@@ -72,11 +71,7 @@ const About = () => {
             variants={fadeIn("", "", 0.1, 1)}
             className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
           > 
-            I'm a skilled software developer with experience in TypeScript,
-            JavaScript, Swift and Objective-C and expertise in frameworks like React JS/Native, Node.js, Cocoa Touch and UIKit.
-            I'm a quick learner and collaborate closely with clients to
-            create efficient, scalable, and user-friendly solutions that solve
-            real-world problems. Let's work together to bring your ideas to life!
+            iOS and full-stack developer with close to 4 years’ experience building 10+ scalable SaaS and native mobile-first applications for 20+ clients using Swift, SwiftUI, React, TypeScript, and modern web technologies.
           </motion.p>
         </div>
         <div style={{flex: 0.5}}>

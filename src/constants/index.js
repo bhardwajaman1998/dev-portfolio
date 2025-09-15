@@ -9,16 +9,15 @@ import {
   mongodb,
   git,
   swift,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
   clicklabs,
   wellquest,
-  skillbridge,
-  autohive,
-  googleVision,
-  movieDb
+  yelo,
+  jugnoo,
+  jungleworks,
+  tookan,
+  mappr,
+  momentum
 } from "../assets";
 
 export const navLinks = [
@@ -38,6 +37,10 @@ export const navLinks = [
 
 const services = [
   {
+    title: "iOS app Developer",
+    icon: mobile,
+  }, 
+  {
     title: "Full Stack Developer",
     icon: web,
   },
@@ -48,14 +51,18 @@ const services = [
   {
     title: "Backend Developer",
     icon: backend,
-  },
-  {
-    title: "iOS app Developer",
-    icon: mobile,
-  },
+  }
 ];
 
 const technologies = [
+  {
+    name: "Swift",
+    icon: swift,
+  },
+  {
+    name: "SwiftUI",
+    icon: swift,
+  },
   {
     name: "JavaScript",
     icon: javascript,
@@ -69,15 +76,11 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Swift",
-    icon: swift,
-  },
-  {
-    name: "Node JS",
+    name: "Node/Express JS",
     icon: nodejs,
   },
   {
-    name: "MongoDB",
+    name: "PostGreSQL",
     icon: mongodb,
   },
   {
@@ -92,29 +95,39 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Software Developer",
-    company_name: "ClickLabs",
-    icon: clicklabs,
+    title: "Associate Software Developer",
+    company_name: "ClickLabs (Jugnoo)",
+    icon: jugnoo,
     iconBg: "#383E56",
-    date: "2020 - 2022",
+    date: "2021 - 2022",
     points: [
-      "Developing and maintaining iOS mobile applications using React.js and other related technologies.",
-      "Spearheaded the development of over 30+ innovative iOS applications on the Mac platform, leveraging Swift/Objective-C and Cocoa frameworks to deliver advanced functionalities.",
-      "Applied strong programming skills and object-oriented analysis and design principles to develop scalable and maintainable codebases.",
-      "Mentored team members, fostering a culture of knowledge-sharing and effective collaboration",
+      "Migrated Jugnoo’s legacy iOS app from Objective-C to Swift in 4 months, improving stability and performance.",
+      "Delivered real-time tracking, multilingual support, and payment integrations in white-labeled ride-hailing and rental apps.",
+      "Enhanced dispatcher and admin panels with analytics dashboards for better fleet and trip management."
     ],
   },
   {
-    title: "Software Developer Intern",
+    title: "Associate Software Developer",
+    company_name: "Jungleworks",
+    icon: jungleworks,
+    iconBg: "#383E56",
+    date: "2020 - 2021",
+    points: [
+      "Fixed 180+ bugs in 2 months on the government-backed SmartBike IoT project, enabling launch in 3 major cities.",
+      "Delivered 30+ application features for clients across 10+ countries, ensuring scalable and consistent UI/UX standards.",
+      "Mentored and guided interns on coding best practices, code reviews, and project delivery."
+    ],
+  },
+    {
+    title: "Associate Software Developer",
     company_name: "ClickLabs",
     icon: clicklabs,
     iconBg: "#383E56",
     date: "2019 - 2020",
     points: [
-      "Aided in optimising coding and testing procedures, enhancing efficiency.",
-      "Developed adeptness in Swift and Objective-C through practical application",
-      "Played a key role in crafting program specifications, and ensuring adherence to industry benchmarks.", 
-      "Transitioned to real-world application development swiftly after minimal training.",
+      "Improved UI responsiveness in Yelo, enhancing navigation speed and usability.",
+      "Supported development of delivery tracking and route optimization features in Tookan for field agents.",
+      "Collaborated in agile sprint cycles, assisting with bug fixes and code reviews under senior developer guidance."
     ],
   }
 ];
@@ -124,140 +137,68 @@ const testimonials = [
 
 const projects = [
   {
+    name: "Momentum",
+    description:
+      "An iOS app built in Swift that uses CoreML/openAI-powered sentiment analysis to track moods, visualize trends, and provide personalized recommendations for well-being.",
+    tags: [
+      { name: "Swift", color: "blue-text-gradient" },
+      { name: "CoreML", color: "green-text-gradient" },
+      { name: "UIKit", color: "pink-text-gradient" },
+    ],
+    image: momentum, // add your screenshot here
+    source_code_link: "https://github.com/bhardwajaman1998/MoodTracker-AI",
+  },
+    {
+    name: "Yelo Ordering App",
+    description:
+      "No-code SaaS platform enabling merchants to create online stores. Built features like store setup, product catalogs, and checkout flows, serving 1,000+ businesses worldwide.",
+    tags: [
+      { name: "Swift", color: "blue-text-gradient" },
+      { name: "React", color: "green-text-gradient" },
+      { name: "NodeJS", color: "pink-text-gradient" },
+    ],
+    image: yelo,
+    source_code_link:
+      "https://apps.apple.com/ca/app/yelo-build-online-local-store/id1526698470",
+  },
+  {
+    name: "Tookan Delivery App",
+    description:
+      "Delivery management solution with real-time tracking, task assignment, and push notifications, improving operational efficiency for global businesses.",
+    tags: [
+      { name: "Swift", color: "blue-text-gradient" },
+      { name: "NodeJS", color: "green-text-gradient" },
+      { name: "REST", color: "pink-text-gradient" },
+    ],
+    image: tookan,
+    source_code_link: "https://apps.apple.com/ca/app/tookan-agent/id997255391",
+  },
+  {
+    name: "Mappr Route Planner",
+    description:
+      "Route optimization and fleet mapping solution. Built interactive map UI and optimization logic to reduce delivery times for enterprise clients.",
+    tags: [
+      { name: "Swift", color: "blue-text-gradient" },
+      { name: "NodeJS", color: "green-text-gradient" },
+      { name: "REST", color: "pink-text-gradient" },
+    ],
+    image: mappr,
+    source_code_link: "https://apps.apple.com/ca/app/mappr-route-planner/id1609359238",
+  },
+  {
     name: "WellQuest",
     description:
-      "An intricate React Native marvel meticulously crafted for seamless calorie tracking and cutting-edge image scanning, complemented by a sophisticated appointment scheduling system.",
+      "A wellness tracking app built with React Native and Node.js. Features include habit logging, real-time dashboards, and progress tracking. Presented at Langara’s Capstone Showcase.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "REST",
-        color: "green-text-gradient",
-      },
-      {
-        name: "GluestackUI",
-        color: "pink-text-gradient",
-      },
+      { name: "ReactNative", color: "blue-text-gradient" },
+      { name: "NodeJS", color: "green-text-gradient" },
+      { name: "MongoDB", color: "green-text-gradient" },
+      { name: "REST", color: "pink-text-gradient" },
     ],
     image: wellquest,
     source_code_link: "https://github.com/bhardwajaman1998/wellquest-frontend",
-  },
-  {
-    name: "SkillBridge",
-    description:
-      " A sophisticated fusion of React.js frontend and Node.js backend, featuring an elegant dashboard meticulously designed to simplify startup developer onboarding, enhanced with cutting-edge OpenAI testing capabilities.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "REST",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: skillbridge,
-    source_code_link: "https://github.com/bhardwajaman1998/Cosmic-Chaos-Skillbridge",
-  },
-  {
-    name: "WellQuest-Backend",
-    description:
-      "A robust Node.js backend intricately interwoven with MongoDB, engineered to perfection, empowering Wellquest's frontend with dynamic REST APIs, setting the stage for unparalleled user experiences.",
-    tags: [
-      {
-        name: "NodeJS",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "REST",
-        color: "green-text-gradient",
-      },
-      {
-        name: "AwsEC2",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: wellquest,
-    source_code_link: "https://github.com/bhardwajaman1998/wellquest-backend",
-  },
-  {
-    name: "Movie Database",
-    description:
-      "A pinnacle of React Native innovation, meticulously sculpted to deliver unparalleled movie and show exploration experiences, boasting advanced search, sorting, and filtering functionalities for the most discerning of users.",
-    tags: [
-      {
-        name: "ReactNative",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "REST",
-        color: "green-text-gradient",
-      },
-      {
-        name: "GlueStackUI",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: movieDb,
-    source_code_link: "https://github.com/bhardwajaman1998/MovieDB-App",
-  },
-  {
-    name: "AutoHive",
-    description:
-      "A groundbreaking JavaScript masterpiece ingeniously engineered with GraphQL prowess and intelligent caching mechanisms, offering unparalleled precision in managing vast volumes of user vehicle data with effortless grace.",
-    tags: [
-      {
-        name: "Javascript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "GraphQL",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: autohive,
-    source_code_link: "https://github.com/bhardwajaman1998/PeopleAndCars",
-  },
-  {
-    name: "Who am I?",
-    description:
-      "An awe-inspiring JavaScript marvel harnessing the power of Google Vision, meticulously designed to effortlessly identify and categorize objects captured by the camera, offering users a seamless and enlightening experience with every scan.",
-    tags: [
-      {
-        name: "Javascript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "GoogleVisionAPI",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: googleVision,
-    source_code_link: "https://github.com/bhardwajaman1998/Google-Vision-API",
-  },
- 
+  }
 ];
+
 
 export { services, technologies, experiences, testimonials, projects };

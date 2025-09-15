@@ -27,6 +27,12 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import clicklabs from "./company/clicklabs.png";
+import jugnoo from "./company/jugnoo.png"
+import jungleworks from "./company/jungleworks.png"
+import yelo from "./company/yelo.svg"
+import tookan from "./company/tookan.png"
+import mappr from "./company/mappr.png"
+import momentum from "./company/momentum.png"
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -69,6 +75,12 @@ export {
   jobit,
   tripguide,
   clicklabs,
+  tookan,
+  jugnoo,
+  jungleworks,
+  yelo,
+  mappr,
+  momentum,
   wellquest,
   skillbridge,
   autohive,
