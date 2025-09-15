@@ -26,7 +26,7 @@ const Navbar = () => {
   }, []);
 
   const handleDownload = () => {
-    window.open("https://drive.google.com/uc?export=download&id=1zcr-qEWkktMXTD7DylURma6ghTO_CNw9", "_blank");
+    window.open("https://drive.google.com/uc?export=download&id=1LuCkCIPhtdfCBRnX5VWFhK7DVX17Cq47", "_blank");
   };
 
   return (
